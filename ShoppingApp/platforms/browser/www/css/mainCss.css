@@ -1,0 +1,51 @@
+body{
+    font-family: 'Mitr', sans-serif;
+}
+.productPhoto{
+    border-radius: 4px;
+    width: 150px;
+    height: 150px;
+    border: 1px solid rgb(114, 114, 114);
+}
+.card {
+    font-family: 'Mitr', sans-serif;
+    border-radius: 4px;
+    height: 300px;
+    background: linear-gradient(to right, rgb(101, 175, 169), rgb(148, 148, 148));
+    border: 1px solid rgb(85, 85, 85);
+}
+
+.center{
+    text-align: center;
+}
+
+.page__content{
+    top: 56px;
+    bottom: 56px
+}
+
+.page__background{
+    background-color:#BEBEBE;
+}
+
+.toolbar--material{
+    font-family: 'Mitr', sans-serif;
+    background: #ffffff;    
+    background: -webkit-linear-gradient(left,rgb(186, 67, 255) , rgb(255, 204, 0));
+    background: -o-linear-gradient(right, rgb(186, 67, 255), rgb(255, 230, 0)); 
+    background: -moz-linear-gradient(right, rgb(186, 67, 255), rgb(255, 238, 0)); 
+    background: linear-gradient(to right, rgb(186, 67, 255), rgb(217, 255, 0));
+    margin: 0px;
+    
+}
+
+.bottom-bar{
+    font-family: 'Mitr', sans-serif;
+    background: #ffffff;    
+    background: -webkit-linear-gradient(left,rgb(186, 67, 255) , rgb(255, 204, 0));
+    background: -o-linear-gradient(right, rgb(186, 67, 255), rgb(255, 230, 0)); 
+    background: -moz-linear-gradient(right, rgb(186, 67, 255), rgb(255, 238, 0)); 
+    background: linear-gradient(to right, rgb(186, 67, 255), rgb(217, 255, 0));
+    margin: 0px;
+    height: 50px;
+}

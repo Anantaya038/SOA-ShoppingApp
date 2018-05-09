@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Shopee</title>
+  <!-- Required meta tags -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="css/mainCss.css">
+  <link href="https://fonts.googleapis.com/css?family=Mitr" rel="stylesheet">
+</head>
+
+<body>
+  <ons-navigator swipeable id="myNavigator" page="pages/mainPage.html"></ons-navigator>
+
+  <ons-toolbar id="toolsbar">
+    <div class="toolbar__left center">
+      <ons-back-button>Back</ons-back-button>
+    </div>
+    <div id="pageTitle" class="toolbar__center welcomeHeader center">Shopee</div>
+    <div class="toolbar__right avatar center">
+      
+    </div>
+  </ons-toolbar>
+  <ons-modal direction="up">
+    <div style="text-align: center">
+      <p>
+        <ons-icon icon="fa-spinner" size="32px" spin></ons-icon>
+      </p>
+    </div>
+  </ons-modal>
+  <ons-bottom-toolbar modifier="aligned" class="botton-toolbar-align center">
+    <ons-row>
+      <ons-col width="25%">
+        <div id="tab1" style="margin:auto" class="transparent-Bottom-Toolbar">
+          
+        </div>
+      </ons-col>
+      <ons-col width="25%">
+        <div id="tab2" style="margin:auto">
+          
+        </div>
+      </ons-col>
+      <ons-col width="25%">
+        <div id="tab3" style="margin:auto">
+          
+        </div>
+      </ons-col>
+      <ons-col width="25%">
+        <div id="tab4" style="margin:auto">
+          
+        </div>
+      </ons-col>
+    </ons-row>
+  </ons-bottom-toolbar>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+  <script src="js/service.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/function.js"></script>
+  <script src="js/productPush.js"></script>
+  <script src="js/main.js"></script>
+
+  <script id="productsTemplate" type="x-tmpl-mustache">
+    <ons-card onclick='Push.productPush({{productID}}, "{{title}}")'>
+      <div class="center">
+          <div>
+              {{title}}
+            </div>
+        <img class="productPhoto" src="{{picture}}" alt="">
+      </div>
+      <div>
+        {{description}}
+      </div>
+      <div style="color:#e53d3d; margin-top:5px">
+        ฿{{price}}
+      </div>
+    </ons-card>
+    </script>
+    <script id="productsPushTemplate" type="x-tmpl-mustache">
+        <ons-card>
+          <div>
+            <h3>{{title}}</h3>
+          </div>
+          <div class="center">
+            <img class="productPhoto" src="{{picture}}" alt="">
+          </div>
+          <div>
+            {{description}}
+          </div>
+          <div style="color:#e53d3d; margin-top:5px;">
+            ฿{{price}}
+          </div>
+        </ons-card>
+    </script>
+</body>
+
+</html>
