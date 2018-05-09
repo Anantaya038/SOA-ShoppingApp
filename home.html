@@ -22,7 +22,7 @@
     </div>
     <div id="pageTitle" class="toolbar__center welcomeHeader center">Shopee</div>
     <div class="toolbar__right avatar center">
-      Right
+      
     </div>
   </ons-toolbar>
   <ons-modal direction="up">
@@ -36,22 +36,22 @@
     <ons-row>
       <ons-col width="25%">
         <div id="tab1" style="margin:auto" class="transparent-Bottom-Toolbar">
-          S
+          
         </div>
       </ons-col>
       <ons-col width="25%">
         <div id="tab2" style="margin:auto">
-          S
+          
         </div>
       </ons-col>
       <ons-col width="25%">
         <div id="tab3" style="margin:auto">
-          S
+          
         </div>
       </ons-col>
       <ons-col width="25%">
         <div id="tab4" style="margin:auto">
-          S
+          
         </div>
       </ons-col>
     </ons-row>
@@ -70,25 +70,28 @@
   <script src="js/productPush.js"></script>
 
   <script id="productsTemplate" type="x-tmpl-mustache">
-    <ons-card onclick='Push.productPush({{id}}, "{{name}}")'>
+    <ons-card onclick='Push.productPush({{productID}}, "{{title}}")'>
       <div class="center">
-        <img class="productPhoto" src="{{photo}}" alt="">
+          <div>
+              {{title}}
+            </div>
+        <img class="productPhoto" src="{{picture}}" alt="">
       </div>
       <div>
         {{description}}
       </div>
       <div style="color:#e53d3d; margin-top:5px">
-        ${{price}}
+        ฿{{price}}
       </div>
     </ons-card>
     </script>
     <script id="productsPushTemplate" type="x-tmpl-mustache">
         <ons-card>
           <div>
-            <h3>{{name}}</h3>
+            <h3>{{title}}</h3>
           </div>
           <div class="center">
-            <img class="productPhoto" src="{{photo}}" alt="">
+            <img class="productPhoto" src="{{picture}}" alt="">
           </div>
           <div>
             {{description}}

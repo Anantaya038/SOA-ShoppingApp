@@ -1,13 +1,15 @@
 var Service = {
     getProducts : function(){
         var deferred = new $.Deferred();
+        
         $.ajax({
-            url: "https://soaproductapi.herokuapp.com/products",
+            url: "https://productapi977377.herokuapp.com/Products.php/api/products",
             cache: false,
             type: "GET",
             success: function(data){
              if (data) {
-                 deferred.resolve("Done", data)
+                 var json = JSON.parse(data)
+                 deferred.resolve("Done", json)
              }else{
                  deferred.resolve("Error")
              }
@@ -66,12 +68,13 @@ var Service = {
     getProductsById : function(id){
         var deferred = new $.Deferred();
         $.ajax({
-            url: "https://soaproductapi.herokuapp.com/products",
+            url: "https://productapi977377.herokuapp.com/Products.php/api/products",
             cache: false,
             type: "GET",
             success: function(data){
              if (data) {
-                 deferred.resolve("Done", data[id-1])
+                 var json = JSON.parse(data)
+                 deferred.resolve("Done", json[id-1])
              }else{
                  deferred.resolve("Error")
              }
