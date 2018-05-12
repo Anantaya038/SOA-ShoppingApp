@@ -16,6 +16,29 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+ ons.ready(function(){
+    var config = {
+        apiKey: "AIzaSyBXeGB07oD6FU7RacPwK3zEwSUdb2uTJY4",
+        authDomain: "reviewphuket-8ccf6.firebaseapp.com",
+        databaseURL: "https://reviewphuket-8ccf6.firebaseio.com",
+        projectId: "reviewphuket-8ccf6",
+        storageBucket: "reviewphuket-8ccf6.appspot.com",
+        messagingSenderId: "677044504242"
+      };
+      firebase.initializeApp(config);
+
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            ons.notification.toast('Welcome, ' + user.displayName, { timeout: 2000 }).then(function (name) {
+                window.location.replace('home.html?userid=' + user.email);
+            });
+        } else {
+            window.location.replace('login.html');
+        }
+      });
+ })
+
 var app = {
   // Application Constructor
   initialize: function() {
@@ -36,7 +59,7 @@ var app = {
       var listeningElement = parentElement.querySelector('.listening');
       var receivedElement = parentElement.querySelector('.received');
 
-      window.location.replace('home.html');
+      
 
       listeningElement.setAttribute('style', 'display:none;');
       receivedElement.setAttribute('style', 'display:block;');
